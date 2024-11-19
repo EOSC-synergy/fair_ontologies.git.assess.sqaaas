@@ -1,0 +1,62 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/oeg-upm/fair_ontologies:
+      branch: main
+      repo: https://github.com/oeg-upm/fair_ontologies.git
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/oeg-upm/fair_ontologies git:
+        commands:
+        - /usr/bin/env sh .sqa/script.ugly-amber-chameleon.sh
+        container: qc.acc_dorky-lime-camel
+  QC.Doc:
+    repos:
+      github.com/oeg-upm/fair_ontologies find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.wiggy-smalt-tarantula.sh
+        container: qc.doc_stuffy-sangria-mandrill
+      github.com/oeg-upm/fair_ontologies git:
+        commands:
+        - /usr/bin/env sh .sqa/script.chummy-cream-cichlid.sh
+        container: qc.doc_hasty-khaki-dragonfly
+      github.com/oeg-upm/fair_ontologies markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.slimy-sangria-akbash.sh
+        container: qc.doc_beady-periwinkle-eagle
+  QC.Lic:
+    repos:
+      github.com/oeg-upm/fair_ontologies licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.greasy-denim-zonkey.sh
+        container: qc.lic_clammy-linen-collie
+  QC.Met:
+    repos:
+      github.com/oeg-upm/fair_ontologies cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.shaggy-periwinkle-greyhound.sh
+        container: qc.met_freaky-thistle-pinscher
+  QC.Sty:
+    repos:
+      github.com/oeg-upm/fair_ontologies checkstyle:
+        commands:
+        - /usr/bin/env sh .sqa/script.stuffy-sangria-olm.sh
+        container: qc.sty_hilly-grey-coyote
+      github.com/oeg-upm/fair_ontologies jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.cozy-orange-blue.sh
+        container: qc.sty_craggy-malachite-zebu
+  QC.Ver:
+    repos:
+      github.com/oeg-upm/fair_ontologies get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.hilly-persimmon-antelope.sh
+        container: qc.ver_woozy-tomato-setter
+timeout: 5400
