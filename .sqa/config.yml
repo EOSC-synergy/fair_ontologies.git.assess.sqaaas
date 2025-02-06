@@ -15,48 +15,48 @@ sqa_criteria:
     repos:
       github.com/oeg-upm/fair_ontologies git:
         commands:
-        - /usr/bin/env sh .sqa/script.ugly-amber-chameleon.sh
-        container: qc.acc_dorky-lime-camel
+        - /usr/bin/env sh .sqa/script.wimpy-ecru-burmese.sh
+        container: qc.acc_craggy-platinum-woodlouse
   QC.Doc:
     repos:
       github.com/oeg-upm/fair_ontologies find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.wiggy-smalt-tarantula.sh
-        container: qc.doc_stuffy-sangria-mandrill
+        - /usr/bin/env sh .sqa/script.gummy-cinnabar-warthog.sh
+        container: qc.doc_jumpy-eggplant-quokka
       github.com/oeg-upm/fair_ontologies git:
         commands:
-        - /usr/bin/env sh .sqa/script.chummy-cream-cichlid.sh
-        container: qc.doc_hasty-khaki-dragonfly
+        - /usr/bin/env sh .sqa/script.skinny-carmine-chicken.sh
+        container: qc.doc_cozy-cerulean-caterpillar
       github.com/oeg-upm/fair_ontologies markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.slimy-sangria-akbash.sh
-        container: qc.doc_beady-periwinkle-eagle
+        - /usr/bin/env sh .sqa/script.grumpy-olivine-bat.sh
+        container: qc.doc_wheezy-myrtle-capybara
   QC.Lic:
     repos:
       github.com/oeg-upm/fair_ontologies licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.greasy-denim-zonkey.sh
-        container: qc.lic_clammy-linen-collie
+        - /usr/bin/env sh .sqa/script.beady-lime-wallaby.sh
+        container: qc.lic_pasty-sapphire-sheepdog
   QC.Met:
     repos:
       github.com/oeg-upm/fair_ontologies cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.shaggy-periwinkle-greyhound.sh
-        container: qc.met_freaky-thistle-pinscher
+        - /usr/bin/env sh .sqa/script.flimsy-brass-audemer.sh
+        container: qc.met_wimpy-olivine-cichlid
   QC.Sty:
     repos:
       github.com/oeg-upm/fair_ontologies checkstyle:
         commands:
-        - /usr/bin/env sh .sqa/script.stuffy-sangria-olm.sh
-        container: qc.sty_hilly-grey-coyote
+        - /usr/bin/env sh .sqa/script.slimy-denim-frise.sh
+        container: qc.sty_grumpy-cream-shark
       github.com/oeg-upm/fair_ontologies jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.cozy-orange-blue.sh
-        container: qc.sty_craggy-malachite-zebu
+        - /usr/bin/env sh .sqa/script.droopy-denim-wombat.sh
+        container: qc.sty_freaky-bistre-maltese
   QC.Ver:
     repos:
       github.com/oeg-upm/fair_ontologies get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.hilly-persimmon-antelope.sh
-        container: qc.ver_woozy-tomato-setter
+        - /usr/bin/env sh .sqa/script.breezy-sepia-bloodhound.sh
+        container: qc.ver_shaky-asparagus-sloth
 timeout: 5400
